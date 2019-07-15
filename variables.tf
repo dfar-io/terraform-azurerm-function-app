@@ -1,11 +1,19 @@
-variable "rg_name" {}
-variable "rg_location" {}
-variable "storage_account_name" {}
-variable "function_app_plan_name" {}
-variable "function_app_name" {}
-variable "ai_instrumentation_key" {
-  default = ""
+variable "rg_name" {
+  description = "The name of the Resource Group the Function App will be contained in."
 }
-variable "blob_storage_container" {
-  default = ""
+variable "rg_location" {
+  description = "The name of the Resource Group the Function App will be contained in."
+}
+variable "storage_account_name" {
+  description = "The Storage Account name for Function App."
+}
+variable "function_app_plan_name" {
+  description = "The Function App Service Plan."
+}
+variable "function_app_name" {
+  description = "The Function App Name."
+}
+variable "app_settings" {
+  description = "Function App settings."
+  default     = {}
 }

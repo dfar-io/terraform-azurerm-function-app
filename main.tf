@@ -25,17 +25,5 @@ resource "azurerm_function_app" "fa" {
   app_service_plan_id       = "${azurerm_app_service_plan.asp_fa.id}"
   storage_connection_string = "${azurerm_storage_account.sa.primary_connection_string}"
   version                   = "~2"
-  app_settings = {
-    APPINSIGHTS_INSTRUMENTATIONKEY                  = "${var.ai_instrumentation_key}"
-    AZURE_FUNCTION_PROXY_BACKEND_URL_DECODE_SLASHES = "True"
-    BlobStorage                                     = "${azurerm_storage_account.sa.primary_connection_string}"
-    BlobStorageContainer                            = "${var.blob_storage_container}"
-    BlobStorageContainerPurchase                    = "${var.blob_storage_container}"
-    Branch                                          = "master"
-    Commit                                          = "0123456789ABCDEF"
-    FUNCTIONS_WORKER_RUNTIME                        = "dotnet"
-    ServiceName                                     = "api"
-    ServiceVersion                                  = "0.0.0"
-    WEBSITE_RUN_FROM_PACKAGE                        = "1"
-  }
+  app_settings              = "${var.app_settings}"
 }
