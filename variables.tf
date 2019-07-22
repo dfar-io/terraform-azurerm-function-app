@@ -17,3 +17,11 @@ variable "app_settings" {
   description = "Function App settings."
   default     = {}
 }
+variable "tier" {
+  description = "The tier the function app will use. (defaults to Consumption)"
+  default     = "Dynamic"
+}
+variable "size" {
+  description = "The size the function app will use. (defaults to Consumption)"
+  default     = "Y1"
+}

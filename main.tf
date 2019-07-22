@@ -10,11 +10,11 @@ resource "azurerm_app_service_plan" "asp_fa" {
   name                = "${var.function_app_plan_name}"
   resource_group_name = "${var.rg_name}"
   location            = "${var.rg_location}"
-  kind                = "FunctionApp"
+  kind                = "${var.tier == "Dynamic" && var.size == "Y1" ? "FunctionApp" : "Windows"}"
 
   sku {
-    tier = "Dynamic"
-    size = "Y1"
+    tier = "${var.tier}"
+    size = "${var.size}"
   }
 }
 
