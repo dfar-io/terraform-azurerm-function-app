@@ -17,3 +17,8 @@ output "possible_outbound_ip_addresses" {
   description = "The possible IP addresses of the Function App."
   value       = "${azurerm_function_app.fa.possible_outbound_ip_addresses}"
 }
+
+output "default_hostname" {
+  description = "The default hostname associated with the Function App - such as mysite.azurewebsites.net."
+  value       = "${azurerm_function_app.fa.default_hostname}"
+}
