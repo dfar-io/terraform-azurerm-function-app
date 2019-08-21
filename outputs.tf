@@ -22,3 +22,8 @@ output "default_hostname" {
   description = "The default hostname associated with the Function App - such as mysite.azurewebsites.net."
   value       = "${azurerm_function_app.fa.default_hostname}"
 }
+
+output "id" {
+  description = "The object ID of the function app."
+  value       = "${azurerm_function_app.fa.id}"
+}
