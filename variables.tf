@@ -11,6 +11,10 @@ variable "storage_account_kind" {
   description = "The Storage Account type."
   default = "Storage"
 }
+variable "storage_account_enable_https_traffic_only" {
+  description = "If the created Storage Account should only allow HTTPS connections."
+  default = "false"
+}
 variable "function_app_plan_name" {
   description = "The Function App Service Plan."
 }
