@@ -7,6 +7,10 @@ variable "rg_location" {
 variable "storage_account_name" {
   description = "The Storage Account name for Function App."
 }
+variable "storage_account_kind" {
+  description = "The Storage Account type."
+  default = "Storage"
+}
 variable "function_app_plan_name" {
   description = "The Function App Service Plan."
 }
