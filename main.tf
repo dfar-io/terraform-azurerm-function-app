@@ -4,6 +4,7 @@ resource "azurerm_storage_account" "sa" {
   location                 = "${var.rg_location}"
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  account_kind             = "${var.storage_account_kind}"
 }
 
 resource "azurerm_app_service_plan" "asp_fa" {
