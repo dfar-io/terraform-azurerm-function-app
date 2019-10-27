@@ -28,4 +28,7 @@ resource "azurerm_function_app" "fa" {
   storage_connection_string = "${azurerm_storage_account.sa.primary_connection_string}"
   version                   = "~2"
   app_settings              = "${var.app_settings}"
+  site_config {
+    always_on = "${var.always_on}"
+  }
 }

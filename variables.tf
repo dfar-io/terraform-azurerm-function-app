@@ -25,6 +25,11 @@ variable "app_settings" {
   description = "Function App settings."
   default     = {}
 }
+
+variable "always_on" {
+  description = "Whether the Function App should always be on (only applies to dedicated App Service Plans)."
+  default     = false
+}
 variable "tier" {
   description = "The tier the function app will use. (defaults to Consumption)"
   default     = "Dynamic"
