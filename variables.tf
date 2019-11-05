@@ -25,6 +25,10 @@ variable "app_settings" {
   description = "Function App settings."
   default     = {}
 }
+variable "https_only" {
+  description = "If the function app should force HTTPS."
+  default     = false
+}
 
 variable "always_on" {
   description = "Whether the Function App should always be on (only applies to dedicated App Service Plans)."
