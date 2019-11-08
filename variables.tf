@@ -9,11 +9,11 @@ variable "storage_account_name" {
 }
 variable "storage_account_kind" {
   description = "The Storage Account type."
-  default = "Storage"
+  default     = "Storage"
 }
 variable "storage_account_enable_https_traffic_only" {
   description = "If the created Storage Account should only allow HTTPS connections."
-  default = "false"
+  default     = "false"
 }
 variable "function_app_plan_name" {
   description = "The Function App Service Plan."
@@ -41,4 +41,9 @@ variable "tier" {
 variable "size" {
   description = "The size the function app will use. (defaults to Consumption)"
   default     = "Y1"
+}
+variable "cors_allowed_origins" {
+  description = "Allowed origins (CORS) for the Function App."
+  type        = list(string)
+  default     = []
 }

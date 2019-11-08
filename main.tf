@@ -31,5 +31,8 @@ resource "azurerm_function_app" "fa" {
   https_only                = "${var.https_only}"
   site_config {
     always_on = "${var.always_on}"
+    cors {
+      allowed_origins = "${var.cors_allowed_origins}"
+    }
   }
 }
